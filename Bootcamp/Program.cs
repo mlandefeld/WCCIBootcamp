@@ -23,7 +23,8 @@ namespace Bootcamp
             //WeekTwoDayThree.multiplyRange();
 
             //Week Two Day Four - 
-            //WeekTwo.DayFour WeekTwoDayFour = new WeekTwo.DayFour();
+            WeekTwo.DayFour WeekTwoDayFour = new WeekTwo.DayFour();
+            WeekTwoDayFour.dayFour();
 
         }
     }
