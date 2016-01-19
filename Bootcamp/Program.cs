@@ -14,7 +14,7 @@ namespace Bootcamp
             //Week Two Day One 
             //WeekTwo.DayOne WeekTwoDayOne = new WeekTwo.DayOne();
             //WeekTwoDayOne.old();
-            
+
             //Week Two Day Three - Fizz Buzz
             //WeekTwo.DayThree WeekTwoDayThree = new WeekTwo.DayThree();
             //WeekTwoDayThree.fizzBuzz();
@@ -23,8 +23,12 @@ namespace Bootcamp
             //WeekTwoDayThree.multiplyRange();
 
             //Week Two Day Four - 
-            WeekTwo.DayFour WeekTwoDayFour = new WeekTwo.DayFour();
-            WeekTwoDayFour.dayFour();
+            // WeekTwo.DayFour WeekTwoDayFour = new WeekTwo.DayFour();
+            //WeekTwoDayFour.dayFour();
+
+            //Week Three Day One - 
+            WeekThree.DayOne WeekThreeDayOne = new WeekThree.DayOne();
+            WeekThreeDayOne.num();
 
         }
     }

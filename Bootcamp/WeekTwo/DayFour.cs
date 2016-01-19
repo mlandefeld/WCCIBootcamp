@@ -126,33 +126,41 @@ namespace Bootcamp.WeekTwo
 
    */
 
-            string line = (Console.ReadLine());
+            string line = "2 7 15";
+            string[] separate = line.Split(new char[] { ' ' });
 
-            //int[]= (
+            int X = Convert.ToInt32(separate[0]);
+            int Y = Convert.ToInt32(separate[1]);
+            int N = Convert.ToInt32(separate[2]);
 
-            for (int i = 1; i <= 100; i++)
+
+
+            for (int i = 1; i <= N; i++)
             {
-                if (i % 3 == 0 && i % 5 == 0)
+                if (i % X == 0 && i % Y == 0)
                 {
-                    Console.WriteLine("FB");
+                    Console.Write("FB");
                 }
 
-                else if (i % 3 == 0)
+                else if (i % X == 0)
                 {
-                    Console.WriteLine("F");
+                    Console.Write("F");
                 }
 
-                else if (i % 5 == 0)
+                else if (i % Y == 0)
                 {
-                    Console.WriteLine("B");
+                    Console.Write("B");
                 }
 
                 else
                 {
-                    Console.WriteLine(i);
+                    Console.Write(i);
                 }
-
             }
+
+            Console.WriteLine();
+
+
         }
 
     }
