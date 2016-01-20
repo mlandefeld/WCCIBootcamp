@@ -45,8 +45,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeekThree\DayThree.cs" />
+    <Compile Include="WeekThree\DayTwo.cs" />
     <Compile Include="WeekOne\DayOne.cs" />
-    <Compile Include="Week Three\DayOne.cs" />
+    <Compile Include="WeekThree\DayOne.cs" />
+    <Compile Include="WeekThree\ProjectDay.cs" />
     <Compile Include="WeekTwo\DayFour.cs" />
     <Compile Include="WeekTwo\DayOne.cs" />
     <Compile Include="WeekTwo\DayThree.cs" />
