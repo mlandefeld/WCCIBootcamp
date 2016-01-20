@@ -52,7 +52,7 @@ namespace Bootcamp.WeekThree
                     break;
             }
 
-            if c 
+           
 
 
         }

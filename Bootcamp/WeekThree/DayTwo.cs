@@ -11,22 +11,29 @@ namespace Bootcamp.WeekThree
         public void reverseWords()
         {
             string line = "   Hello CodeEval";
-            string[] arrline = line.Split();
-            
-            Array.Reverse(arrline);
-            foreach (string i in arrline)
+            if (line != null)
             {
-                if (arrline == null)
-                {
-                    continue;
-                }
+                string[] arrayOfWords = line.Split();
+                Array.Reverse(arrayOfWords);
 
-                string linetwo = line.Trim();
-                Console.Write(i + " ");
+                string final = joinArray(arrayOfWords);
+
+                Console.WriteLine(final);
+            }
+        }
+
+        public string joinArray(string[] arrayOfWords)
+        {
+            string final = "";
+
+            foreach (string word in arrayOfWords)
+            {
+                final += word + " ";
             }
 
-            
-            
+            final = final.Trim();
+
+            return final;
         }
 
         public void forEach()
@@ -43,15 +50,15 @@ namespace Bootcamp.WeekThree
         public void sumOfDigits()
         {
             string line = "23";
-            string[] array = line.Split();
-            int sum = int.Parse(array);
 
-            for (int i = 0; i < array.Length; i++)
+            int sum = 0;
+
+            for (int i = 0; i <= line.Length - 1; i++)
             {
-                sum += i;
+                int x = int.Parse(line[i].ToString());
+                sum += x;
             }
             Console.WriteLine(sum);
-
         }
 
     }
