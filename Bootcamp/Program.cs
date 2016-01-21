@@ -31,9 +31,12 @@ namespace Bootcamp
            // WeekThreeDayOne.num();
 
            //Week Three Day Two - 
-             WeekThree.DayTwo WeekThreeDayTwo = new WeekThree.DayTwo();
-             WeekThreeDayTwo.sumOfDigits();
+           //WeekThree.DayTwo WeekThreeDayTwo = new WeekThree.DayTwo();
+           //WeekThreeDayTwo.sumOfDigits();
 
+            //Week Three Day Three - 
+             WeekThree.DayThree WeekThreeDayThree = new WeekThree.DayThree();
+             WeekThreeDayThree.upperLower();
 
         }
     }

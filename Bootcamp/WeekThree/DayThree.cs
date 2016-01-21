@@ -29,18 +29,23 @@ namespace Bootcamp.WeekThree
         {
             string line = "A letter";
 
-         /*   if (x == char.IsLower)
+            string newLine ="";
+            for (int i = 0; i <= line.Length - 1; i++)
             {
-                line.ToUpper();
-                Console.WriteLine(x);
-            }
+                if (Char.IsUpper(line[i]))
+                {
+                    newLine = newLine + char.ToLower(line[i]);
+                } 
 
-            else
-            {
-                line.ToLower();
-            }
+                else
+                {
+                    newLine = newLine + char.ToUpper(line[i]);
 
-            Console.WriteLine();  */          
+                }
+                
+            }
+            Console.WriteLine(newLine);
+
         }
 
         public void equals()
