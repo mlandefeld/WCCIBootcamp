@@ -82,5 +82,10 @@ namespace Bootcamp.WeekThree
 
             }
         }
+
+        public void codeTest()
+        {
+            Console.WriteLine();
+        }
     }
 }
