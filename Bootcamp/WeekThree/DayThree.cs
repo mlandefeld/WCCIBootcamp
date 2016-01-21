@@ -29,7 +29,7 @@ namespace Bootcamp.WeekThree
         {
             string line = "A letter";
 
-            if (x == char.IsLower)
+         /*   if (x == char.IsLower)
             {
                 line.ToUpper();
                 Console.WriteLine(x);
@@ -40,8 +40,7 @@ namespace Bootcamp.WeekThree
                 line.ToLower();
             }
 
-            Console.WriteLine()
-            
+            Console.WriteLine();  */          
         }
 
         public void equals()
