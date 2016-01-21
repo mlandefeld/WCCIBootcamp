@@ -32,7 +32,7 @@ namespace Bootcamp
 
            //Week Three Day Two - 
              WeekThree.DayTwo WeekThreeDayTwo = new WeekThree.DayTwo();
-             WeekThreeDayTwo.reverseWords();
+             WeekThreeDayTwo.sumOfDigits();
 
 
         }

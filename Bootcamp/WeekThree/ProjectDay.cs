@@ -19,7 +19,7 @@ namespace Bootcamp.WeekThree
             Console.WriteLine("What month were you born? ");
             string d = Console.ReadLine();
             Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"HELP\". ");
-            Console.ReadLine();
+            string e = Console.ReadLine();
             Console.WriteLine("How many siblings do you have? ");
             int f = int.Parse(Console.ReadLine());
 
@@ -52,7 +52,38 @@ namespace Bootcamp.WeekThree
                     break;
             }
 
-            if c 
+            switch (e)
+            {
+                case "R":
+                    Console.WriteLine("");
+                    break;
+                case "O":
+                    Console.WriteLine("");
+                    break;
+                case "Y":
+                    Console.WriteLine("");
+                    break;
+                case "G":
+                    Console.WriteLine("");
+                    break;
+                case "B":
+                    Console.WriteLine("");
+                    break;
+                case "I":
+                    Console.WriteLine("");
+                    break;
+                case "V":
+                    Console.WriteLine("");
+                    break;
+                default:
+                    Console.WriteLine();
+                    break;
+
+
+            }
+               
+
+           
 
 
         }
