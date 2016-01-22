@@ -75,7 +75,32 @@ namespace Bootcamp.WeekThree
                     Console.WriteLine("You need to enter a valid number!");
                 }
 
-                
+
+                string[] months = new string[11];
+                months[0] = "january";
+                months[1] = "february";
+                months[2] = "march";
+                months[3] = "april";
+                months[4] = "may";
+                months[5] = "june";
+                months[6] = "july";
+                months[7] = "august";
+                months[8] = "september";
+                months[9] = "october";
+                months[10] = "november";
+                months[11] = "december";
+
+                int x;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (a.Contains(i[0]) | b.Contains(i[0]))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                }
+
+            /*
+
                 if (d == "january")
                 {
                     if (a.Contains("j") | b.Contains("j"))
@@ -305,7 +330,7 @@ namespace Bootcamp.WeekThree
                         Console.WriteLine("$0");
                     }
                 }
-
+                */
                 
                 if (e == "red")
                 {
