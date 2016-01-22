@@ -12,7 +12,8 @@ namespace Bootcamp.WeekThree
         {
             while (true)
             {
-
+                Console.WriteLine("Welcome to the the Amazing and Incredibly Accurate Forture telling machine!");
+                Console.WriteLine("If the game gets to be too much for you, enter \"Quit\" at any time, or if you wish to restart the game at any time, enter \"Restart\"");
                 Console.WriteLine("What is your first name? ");
                 string a = Console.ReadLine().ToLower();
                 Console.WriteLine("What is your last name? ");
@@ -40,7 +41,7 @@ namespace Bootcamp.WeekThree
                 Console.WriteLine("How many siblings do you have? ");
                 int f = int.Parse(Console.ReadLine());
 
-                Console.WriteLine(a + " " + b);
+                
                 if (c % 2 == 1)
                 {
                     Console.WriteLine("10 years");
