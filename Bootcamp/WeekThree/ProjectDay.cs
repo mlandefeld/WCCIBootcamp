@@ -10,82 +10,361 @@ namespace Bootcamp.WeekThree
     {
         public void Project()
         {
-            Console.WriteLine("What is your first name? ");
-            string a = Console.ReadLine();
-            Console.WriteLine("What is your last name? ");
-            string b = Console.ReadLine();
-            Console.WriteLine("How old are you? ");
-            int c = int.Parse(Console.ReadLine());
-            Console.WriteLine("What month were you born? ");
-            string d = Console.ReadLine();
-            Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"HELP\". ");
-            string e = Console.ReadLine();
-            Console.WriteLine("How many siblings do you have? ");
-            int f = int.Parse(Console.ReadLine());
-
-            if (c % 2 == 1)
+            while (true)
             {
-                Console.WriteLine("You will retire in 10 years.");
+
+                Console.WriteLine("What is your first name? ");
+                string a = Console.ReadLine().ToLower();
+                Console.WriteLine("What is your last name? ");
+                string b = Console.ReadLine().ToLower();
+                Console.WriteLine("How old are you? ");
+                int c = int.Parse(Console.ReadLine());
+                Console.WriteLine("What month were you born? ");
+                string d = Console.ReadLine().ToLower();
+                Console.WriteLine("What is your favorite ROYGBIV color? Enter \"Help\" if you don't know what ROYGBIV is.");
+                string e = Console.ReadLine().ToLower();
+                while (true)
+                {
+                    if (e == "help")
+                    {
+                        Console.WriteLine("Choose: \nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
+                        Console.ReadLine();
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    
+                }
+                Console.WriteLine("How many siblings do you have? ");
+                int f = int.Parse(Console.ReadLine());
+
+                Console.WriteLine(a + " " + b);
+                if (c % 2 == 1)
+                {
+                    Console.WriteLine("10 years");
+                }
+
+                if (c % 2 == 0)
+                {
+                    Console.WriteLine("60 years");
+                }
+
+                if (f == 0)
+                {
+                    Console.WriteLine("New Zealand");
+                }
+                else if (f == 1)
+                {
+                    Console.WriteLine("Oklahoma");
+                }
+
+                else if (f == 2)
+                {
+                    Console.WriteLine("the North Pole");
+                }
+
+                else if (f >= 3)
+                {
+                    Console.WriteLine("Cleveland");
+                }
+                else
+                {
+                    Console.WriteLine("You need to enter a valid number!");
+                }
+
+                
+                if (d == "january")
+                {
+                    if (a.Contains("j") | b.Contains("j"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("a") | b.Contains("a"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("n") | b.Contains("n"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+
+                }
+                else if (d == "february")
+                {
+                    if (a.Contains("f") | b.Contains("f"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("e") | b.Contains("e"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("b") | b.Contains("b"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "march")
+                {
+                    if (a.Contains("m") | b.Contains("m"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("a") | b.Contains("a"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("r") | b.Contains("r"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "april")
+                {
+                    if (a.Contains("a") | b.Contains("a"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("p") | b.Contains("p"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("r") | b.Contains("r"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "may")
+                {
+                    if (a.Contains("m") | b.Contains("m"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("a") | b.Contains("a"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("y") | b.Contains("y"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "june")
+                {
+                    if (a.Contains("j") | b.Contains("j"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("u") | b.Contains("u"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("n") | b.Contains("n"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "july")
+                {
+                    if (a.Contains("j") | b.Contains("j"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("u") | b.Contains("u"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("l") | b.Contains("l"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "august")
+                {
+                    if (a.Contains("a") | b.Contains("a"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("u") | b.Contains("u"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("g") | b.Contains("g"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "september")
+                {
+                    if (a.Contains("s") | b.Contains("s"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("e") | b.Contains("e"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("p") | b.Contains("p"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "october")
+                {
+                    if (a.Contains("o") | b.Contains("o"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("c") | b.Contains("c"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("t") | b.Contains("t"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "november")
+                {
+                    if (a.Contains("n") | b.Contains("n"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("o") | b.Contains("o"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("v") | b.Contains("v"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+                else if (d == "december")
+                {
+                    if (a.Contains("d") | b.Contains("d"))
+                    {
+                        Console.WriteLine("$5");
+                    }
+                    else if (a.Contains("e") | b.Contains("e"))
+                    {
+                        Console.WriteLine("$100,000,000");
+                    }
+                    else if (a.Contains("c") | b.Contains("c"))
+                    {
+                        Console.WriteLine("$1000");
+                    }
+                    else
+                    {
+                        Console.WriteLine("$0");
+                    }
+                }
+
+                
+                if (e == "red")
+                {
+                    Console.WriteLine("rowboat!");
+                }
+                else if (e == "orange")
+                {
+                    Console.WriteLine("skateboard!");
+                }
+                else if (e == "yellow")
+                {
+                    Console.WriteLine("motorcycle!");
+                }
+                else if (e == "green")
+                {
+                    Console.WriteLine("batmobile!");
+                }
+                else if (e == "blue")
+                {
+                    Console.WriteLine("parachute!");
+                }
+                else if (e == "indigo")
+                {
+                    Console.WriteLine("helicopter!");
+                }
+                else if (e == "violet")
+                {
+                    Console.WriteLine("ferarri!");
+                }
+                else
+                {
+                    Console.WriteLine("Oops! You need to enter a ROYGBIV color or \"Help\"!");
+                }
+
+
+                Console.WriteLine(a + " " + b + " will retire in "  +  c + " with " + d + " in the bank, a vacation home in " + e + " and a "+ f);
+
+                Console.WriteLine("Would you like to try again? \"Yes\" or \"No\"");
+                string g = Console.ReadLine().ToLower();
+               
+
+                if (g == "no")
+                {
+                    Console.WriteLine("Thank you for playing!");
+                    break;
+                }
+                else if (g == "yes")
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("You chose wrong. Good bye!");
+                    break;
+                }
+                
+
             }
-
-            if (c % 2 == 0)
-            {
-                Console.WriteLine("You will retire in 60 years.");
-            }
-
-            switch (f)
-            {
-                case 0:
-                    Console.WriteLine("You will live in New Zealand");
-                    break;
-                case 1:
-                    Console.WriteLine("You will live in Oklahoma");
-                    break;
-                case 2:
-                    Console.WriteLine("You will live in the North Pole");
-                    break;
-                case 3:
-                    Console.WriteLine("You will live in Cleveland");
-                    break;
-                default:
-                    Console.WriteLine("You have too many sibling and will live with them for the rest of your life");
-                    break;
-            }
-
-            switch (e)
-            {
-                case "R":
-                    Console.WriteLine("");
-                    break;
-                case "O":
-                    Console.WriteLine("");
-                    break;
-                case "Y":
-                    Console.WriteLine("");
-                    break;
-                case "G":
-                    Console.WriteLine("");
-                    break;
-                case "B":
-                    Console.WriteLine("");
-                    break;
-                case "I":
-                    Console.WriteLine("");
-                    break;
-                case "V":
-                    Console.WriteLine("");
-                    break;
-                default:
-                    Console.WriteLine();
-                    break;
-
-
-            }
+       
         }
-
-        public void codeTest()
-        {
-            Console.WriteLine();
-        }
+       
     }
 }

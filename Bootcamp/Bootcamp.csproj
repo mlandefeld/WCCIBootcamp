@@ -54,6 +54,7 @@
     <Compile Include="WeekTwo\DayFour.cs" />
     <Compile Include="WeekTwo\DayOne.cs" />
     <Compile Include="WeekTwo\DayThree.cs" />
+    <Compile Include="WeekTwo\WkTwoDayTwo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

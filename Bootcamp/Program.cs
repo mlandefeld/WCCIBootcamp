@@ -27,17 +27,20 @@ namespace Bootcamp
             //WeekTwoDayFour.dayFour();
 
             //Week Three Day One - 
-           // WeekThree.DayOne WeekThreeDayOne = new WeekThree.DayOne();
-           // WeekThreeDayOne.num();
+            // WeekThree.DayOne WeekThreeDayOne = new WeekThree.DayOne();
+            // WeekThreeDayOne.num();
 
-           //Week Three Day Two - 
-           //WeekThree.DayTwo WeekThreeDayTwo = new WeekThree.DayTwo();
-           //WeekThreeDayTwo.sumOfDigits();
+            //Week Three Day Two - 
+            //WeekThree.DayTwo WeekThreeDayTwo = new WeekThree.DayTwo();
+            //WeekThreeDayTwo.sumOfDigits();
 
             //Week Three Day Three - 
-             WeekThree.DayThree WeekThreeDayThree = new WeekThree.DayThree();
-             WeekThreeDayThree.upperLower();
+            //WeekThree.DayThree WeekThreeDayThree = new WeekThree.DayThree();
+            //WeekThreeDayThree.upperLower();
 
+            //Week Three Day Four - 
+            WeekThree.ProjectDay WeekThreeProjectDay = new WeekThree.ProjectDay();
+            WeekThreeProjectDay.Project();
         }
     }
 }
