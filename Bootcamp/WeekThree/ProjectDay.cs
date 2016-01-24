@@ -6,107 +6,16 @@ namespace Bootcamp.WeekThree
 {
     class ProjectDay
     {
-        public string[] getInput()
+        public string[] getInputs()
         {
-            Console.WriteLine("Welcome to the the Amazing and Incredibly Accurate Forture telling machine!");
-            Console.WriteLine("If the game gets to be too much for you, enter \"Quit\" at any time, or if you wish to restart the game at any time, enter \"Restart\"");
-            Console.WriteLine("What is your first name? ");
-            string a = Console.ReadLine();
-            while (true)
-            {
-                if (!Regex.IsMatch(a, @"^[a-zA-Z]+$"))
-                {
-                    Console.WriteLine("Your input didn't validate! Try again!");
-                    a = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Console.WriteLine("What is your last name? ");
-            string b = Console.ReadLine();
-            while (true)
-            {
-                if (!Regex.IsMatch(b, @"^[a-zA-Z]+$"))
-                {
-                    Console.WriteLine("Your input didn't validate! Try again!");
-                    b = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Console.WriteLine("How old are you? ");
-            string c =(Console.ReadLine());
-            while (true)
-            {
-                if (!Regex.IsMatch(c, @"^[0-9]+$"))
-                {
-                    Console.WriteLine("Your input didn't validate! Try again!");
-                    c = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            Console.WriteLine("What month were you born? ");
-            string d = Console.ReadLine();
-            while (true)
-            {
-                if (!isValidMonth(d))
-                {
-                    Console.WriteLine("Your input didn't validate! Try again! ");
-                    d = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Console.WriteLine("What is your favorite ROYGBIV color? Enter \"Help\" if you don't know what ROYGBIV is.");
-            string e = Console.ReadLine();
-               
-
-            while (true)
-            {
-
-                if (!isValidColor(e))
-                {
-                    if (e.Equals("help", StringComparison.CurrentCultureIgnoreCase))
-                    {
-                        Console.WriteLine("Choose: \nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
-                        e = Console.ReadLine();
-                    }
-                    else
-                    {
-                        Console.WriteLine("Your input didn't validate! Try again! Enter \"Help\" if you don't know what ROYGBIV is.");
-                        e = Console.ReadLine();
-                    }
-                    
-                }
-                else
-                {
-                    break;
-                }
-            }
-            Console.WriteLine("How many siblings do you have? ");
-            string f = (Console.ReadLine());
-            while (true)
-            {
-                if (!Regex.IsMatch(f, @"^[0-9]+$"))
-                {
-                    Console.WriteLine("Your input didn't validate! Try again!");
-                    f = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
+            
+            string a = getInput("What is your first name? ", "letters");
+            string b = getInput("What is your last name? ", "letters");
+            string c = getInput("How old are you? ", "numbers");
+            string d = getInput("What month were you born? ", "months");
+            string e = getInput("What is your favorite ROYGBIV color? Enter \"Help\" if you don't know what ROYGBIV is.", "colors");
+            string f = getInput("How many siblings do you have? ", "numbers");
+           
             string[] input = new string[6];
             input[0] = a;
             input[1] = b;
@@ -117,6 +26,88 @@ namespace Bootcamp.WeekThree
 
             return input;
         }
+
+        public string getInput(string question, string validationType)
+        {
+            Console.WriteLine(question);
+            string input = (Console.ReadLine());
+            while (true)
+            {
+                if (input.Equals("quit", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    Console.WriteLine("Nobody likes a quitter...");
+                    Environment.Exit(0);
+                }
+                if (input.Equals("restart", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    throw new Exception();
+                }
+                if (validationType == "numbers")
+                {
+                    if (!Regex.IsMatch(input, @"^[0-9]+$"))
+                    {
+                        Console.WriteLine("Your input didn't validate! Try again!");
+                        input = Console.ReadLine();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else if (validationType == "letters")
+                {
+                    if (!Regex.IsMatch(input, @"^[a-zA-Z]+$"))
+                    {
+                        Console.WriteLine("Your input didn't validate! Try again!");
+                        input = Console.ReadLine();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else if (validationType == "months")
+                {
+                    if (!isValidMonth(input))
+                    {
+                        Console.WriteLine("Your input didn't validate! Try again! ");
+                        input = Console.ReadLine();
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else if (validationType == "colors")
+                {
+                    if (!isValidColor(input))
+                    {
+                        if (input.Equals("help", StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            Console.WriteLine("Choose: \nRed\nOrange\nYellow\nGreen\nBlue\nIndigo\nViolet");
+                            input = Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Your input didn't validate! Try again! Enter \"Help\" if you don't know what ROYGBIV is.");
+                            input = Console.ReadLine();
+                        }
+
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    return "error!";
+                }
+            }
+
+            return input;
+        }
+
         public bool isValidColor(string color)
         {
             string[] colors = new string[7];
@@ -278,10 +269,13 @@ namespace Bootcamp.WeekThree
 
         public void Project()
         {
+            Console.WriteLine("Welcome to the the Amazing and Incredibly Accurate Forture telling machine!");
+            Console.WriteLine("If the game gets to be too much for you, enter \"Quit\" at any time, or if you wish to restart the game at any time, enter \"Restart\"");
+
             while (true)
             {
 
-                string[] input = getInput();
+                string[] input = getInputs();
 
                 string bankAmount = getPredictedBankAmount(input[0], input[1], input[3]);
 
