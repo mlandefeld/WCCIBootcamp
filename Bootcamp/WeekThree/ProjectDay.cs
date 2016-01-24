@@ -6,6 +6,7 @@ namespace Bootcamp.WeekThree
 {
     class ProjectDay
     {
+        
         public string[] getInputs()
         {
             
@@ -27,6 +28,14 @@ namespace Bootcamp.WeekThree
             return input;
         }
 
+        /// <summary>
+        ///  This function writes a question to the console, retrieves the users input, and then validates it against certain parameters
+        /// </summary>
+        /// <param name="question"></param>
+        /// <param name="validationType"></param>
+        /// <returns>
+        ///     Returns a string array of validated answers to questions
+        /// </returns>
         public string getInput(string question, string validationType)
         {
             Console.WriteLine(question);
@@ -108,6 +117,13 @@ namespace Bootcamp.WeekThree
             return input;
         }
 
+        /// <summary>
+        /// This function checks to make sure that the input is a valid color.
+        /// </summary>
+        /// <param name="color"></param>
+        /// <returns>
+        /// returns true or false
+        /// </returns>
         public bool isValidColor(string color)
         {
             string[] colors = new string[7];
@@ -129,6 +145,13 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function checks to make sure the input is a valid month.
+        /// </summary>
+        /// <param name="month"></param>
+        /// <returns>
+        /// returns true or false
+        /// </returns>
         public bool isValidMonth(string month)
         {
             string[] months = new string[12];
@@ -155,6 +178,15 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function gets predicted bank amount based on letters in the month that are in the input firstname or lastname. 
+        /// </summary>
+        /// <param name="firstname"></param>
+        /// <param name="lastname"></param>
+        /// <param name="birthMonth"></param>
+        /// <returns>
+        /// returns amount in bank.
+        /// </returns>
         public string getPredictedBankAmount(string firstname, string lastname, string birthMonth)
         {
             char firstLetter = birthMonth[0];
@@ -179,6 +211,13 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function checks if input is even or odd
+        /// </summary>
+        /// <param name="ageInput"></param>
+        /// <returns>
+        /// This function returns years to retirement.
+        /// </returns>
         public int getPredictedRetirement(string ageInput)
         {
             int age = int.Parse(ageInput);
@@ -193,6 +232,13 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function gets predicted location based on user input for number of siblings
+        /// </summary>
+        /// <param name="siblings"></param>
+        /// <returns>
+        /// This function returns location 
+        /// </returns>
         public string getPredictedLocation(string siblings)
         {
             int numSiblings = int.Parse(siblings);
@@ -220,6 +266,13 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function gets predicted transportation based on user input for their favorite character 
+        /// </summary>
+        /// <param name="favoriteColor"></param>
+        /// <returns>
+        /// this function returns type of transportation
+        /// </returns>
         public string getPredictedTransportation(string favoriteColor)
         {
             if (favoriteColor.Equals("red", StringComparison.CurrentCultureIgnoreCase))
@@ -256,21 +309,30 @@ namespace Bootcamp.WeekThree
             }
         }
 
+        /// <summary>
+        /// This function makes the first letter of the input uppercase
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns>
+        /// this function returns a string with an uppercase first letter
+        /// </returns>
         public string UppercaseFirst(string s)
         {
-            // Check for empty string.
             if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
             }
-            // Return char and concat substring.
+            
             return char.ToUpper(s[0]) + s.Substring(1);
         }
 
+        /// <summary>
+        /// This function writes the intro for the program to the console, retrieves the users input, writes the players fortune to the console, and asks player if they want to play again. 
+        /// </summary>
         public void Project()
         {
             Console.WriteLine("Welcome to the the Amazing and Incredibly Accurate Forture telling machine!");
-            Console.WriteLine("If the game gets to be too much for you, enter \"Quit\" at any time, or if you wish to restart the game at any time, enter \"Restart\"");
+            Console.WriteLine("If the game gets to be too much for you, enter \"Quit\" at any time, or if you wish to restart the game at any time, enter \"Restart\".");
 
             while (true)
             {
@@ -285,7 +347,7 @@ namespace Bootcamp.WeekThree
 
                 string transportation = getPredictedTransportation(input[4]);
 
-                Console.WriteLine(UppercaseFirst(input[0]) + " " + UppercaseFirst(input[1]) + " will retire in "  +  retiredAge + " years with " + bankAmount + " in the bank, a vacation home in " + location + " and a "+ transportation);
+                Console.WriteLine(UppercaseFirst(input[0]) + " " + UppercaseFirst(input[1]) + " will retire in "  +  retiredAge + " years with " + bankAmount + " in the bank, a vacation home in " + location + ", and a "+ transportation);
 
                 Console.WriteLine("Would you like to try again? \"Yes\" or \"No\"");
                 string g = Console.ReadLine().ToLower();
