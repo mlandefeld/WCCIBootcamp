@@ -40,7 +40,19 @@ namespace Bootcamp
 
             //Week Three Day Four - 
             WeekThree.ProjectDay WeekThreeProjectDay = new WeekThree.ProjectDay();
-            WeekThreeProjectDay.Project();
+            while (true)
+            {
+                try
+                {
+                    WeekThreeProjectDay.Project();
+                    break;
+                }
+                catch (Exception e)
+                {
+                    
+                }
+            }
+            
         }
     }
 }
