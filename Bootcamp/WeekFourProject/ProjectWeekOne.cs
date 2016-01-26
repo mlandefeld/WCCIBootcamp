@@ -12,9 +12,17 @@ namespace Bootcamp.WeekFourProject
         public void Project()
         {
             Console.WriteLine("Bootcamp Resources Checkout System");
-            Console.WriteLine("Menu: \nView Students\nView Available Resources\nView Student Accounts\nCheckout Items\nExit");
+            Console.WriteLine(""+
+                "\tMenu: Enter a number to select option\n\t" + 
+                "1.View Students\n\t" + 
+                "2.View Available Resources\n\t" +
+                "3.View Student Accounts\n\t" +
+                "4.Checkout Items\n\t" +
+                "5.Exit" +
+                "");
+            ResourceLibrary.Commands.viewStudents();
         }
-
+        /*
         public string Menu(string input)
         {
             string[] menuItems = new string[6];
@@ -121,35 +129,7 @@ namespace Bootcamp.WeekFourProject
             return "";
         }
 
-        public string getAvailableResources(string resources)
-        {
-            string[] books = new string[11];
-            books[0] = "C#";
-            books[1] = "ASP.NET MVC 5";
-            books[2] = "The C# Player's Guide";
-            books[3] = "Eloquent JavaScript";
-            books[4] = "SQL Queries";
-            books[5] = "Javascript for Kids";
-            books[6] = "Database Design";
-            books[7] = "C# 5.0 for Dummies";
-            books[8] = "Essential C# 6.0";
-            books[9] = "Assembly Language Tutor";
-            books[10] = "Mastering C Pointers";
-
-            foreach(var i in books)
-            {
-                Console.WriteLine(i.ToString());
-            }
-            
-            Array.Sort<string>(books);
-            foreach (var c in books)
-            {
-                return c;
-            }
-
-            return "";
-           
-        }
+    
 
         public string getStudents(string student)
         {
@@ -170,6 +150,6 @@ namespace Bootcamp.WeekFourProject
         }
 
 
-
+        */
     }
 }

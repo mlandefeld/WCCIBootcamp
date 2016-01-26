@@ -57,18 +57,6 @@ namespace Bootcamp
             //Week Four Project Week - 
             WeekFourProject.ProjectWeekOne WeekFourProjectProjectWeekOne = new WeekFourProject.ProjectWeekOne();
             WeekFourProjectProjectWeekOne.Project();
-            while (true)
-            {
-                try
-                {
-                    WeekFourProjectProjectWeekOne.Project();
-                    break;
-                }
-                catch (Exception e)
-                {
-
-                }
-            }
 
 
         }
