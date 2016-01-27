@@ -9,6 +9,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
     class Student
     {
         public string name = "";
+        public string id = "";
 
         public Student(string inputName)
         {
@@ -30,6 +31,21 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
                 name = value;
             }
         }
-        
+
+        /// <summary>
+        /// getter and setter assign number to name
+        /// </summary>
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
+
     }
 }

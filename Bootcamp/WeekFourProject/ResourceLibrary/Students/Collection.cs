@@ -25,10 +25,10 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
             };
         }
 
-        /**
-        * enumerator interface allows us to iterate over the collection
-        * https://support.microsoft.com/en-us/kb/322022
-        **/
+        /*
+         enumerator interface allows us to iterate over the collection
+         https://support.microsoft.com/en-us/kb/322022
+        */
 
 
         //private enumerator class

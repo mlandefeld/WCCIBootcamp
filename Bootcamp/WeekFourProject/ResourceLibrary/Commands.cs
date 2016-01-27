@@ -43,7 +43,8 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
 
         public static void exit()
         {
-            Console.WriteLine("Thank you for using We Can Code IT's Checkout System!");
+            Console.Clear();
+            Console.WriteLine("Thank you for using We Can Code IT's Bootcamp Library Checkout System!");
             Environment.Exit(0);
         }
     }

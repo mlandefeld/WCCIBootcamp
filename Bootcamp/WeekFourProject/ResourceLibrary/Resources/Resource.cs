@@ -10,6 +10,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
     {
         public string title="";
         public bool available = true;
+        public string id = "";
 
         public Resource(string name)
         {
@@ -43,6 +44,18 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
             set
             {
                 available = value;
+            }
+        }
+
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
             }
         }
 
