@@ -34,14 +34,12 @@ namespace Bootcamp.WeekFourProject
                 "");
             Console.WriteLine(menu);
            string input = Console.ReadLine();
-
+            ResourceLibrary.Commands commandInterface = new ResourceLibrary.Commands();
             while (true)
             {
                 if (input.Equals("exit", StringComparison.CurrentCultureIgnoreCase))
                 {
-                    Console.Clear();
-                    Console.WriteLine("Thank you for using We Can Code IT's Bootcamp Library Checkout System!");
-                    Environment.Exit(0);
+                    ResourceLibrary.Commands.exit();
                 }
                 else if (input == "1")
                 {
@@ -49,6 +47,7 @@ namespace Bootcamp.WeekFourProject
                     string one = "List of Students:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(one);
+                    commandInterface.viewStudents();
                     Console.WriteLine(menu);
                     input = Console.ReadLine();
                     continue;
@@ -60,6 +59,7 @@ namespace Bootcamp.WeekFourProject
                     string two = "List of Available Resources:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(two);
+                    commandInterface.viewAvailableResources();
                     Console.WriteLine(menu);
                     input = Console.ReadLine();
                     continue;
@@ -70,6 +70,7 @@ namespace Bootcamp.WeekFourProject
                     string three = "View Student Accounts:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(three);
+                    commandInterface.viewStudentAccounts();
                     Console.WriteLine(menu);
                     input = Console.ReadLine();
                     continue;
@@ -80,6 +81,7 @@ namespace Bootcamp.WeekFourProject
                     string four = "Checkout Item:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(four);
+                    commandInterface.checkoutItem();
                     Console.WriteLine(menu);
                     input = Console.ReadLine();
                     continue;
@@ -90,15 +92,14 @@ namespace Bootcamp.WeekFourProject
                     string five = "Return Item:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(five);
+                    commandInterface.returnItem();
                     Console.WriteLine(menu);
                     input = Console.ReadLine();
                     continue;
                 }
                 else if(input == "6")
                 {
-                    Console.Clear();
-                    Console.WriteLine("Thank you for using We Can Code IT's Bootcamp Library Checkout System!");
-                    Environment.Exit(0);
+                    ResourceLibrary.Commands.exit();
                 }
                 else
                 {

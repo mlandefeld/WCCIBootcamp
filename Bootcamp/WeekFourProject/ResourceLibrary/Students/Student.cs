@@ -9,11 +9,12 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
     class Student
     {
         public string name = "";
-        public string id = "";
+        public int id = 0;
 
-        public Student(string inputName)
+        public Student(string inputName, int idnew)
         {
             name = inputName;
+            id = idnew;
         }
 
 
@@ -35,7 +36,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
         /// <summary>
         /// getter and setter assign number to name
         /// </summary>
-        public string Id
+        public int Id
         {
             get
             {

@@ -10,13 +10,62 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
     {
         public string title="";
         public bool available = true;
-        public string id = "";
+        public int? id = null;
+        public int? student_id = null;
 
-        public Resource(string name)
+        public Resource(string name, int newID)
         {
+            id = newID;
             title = name;
         }
             
+        public bool isAvailable()
+        {
+            return available;
+        }
+
+        /// <summary>
+        /// This function assigns the student-id to the resource. Sets availability to false. 
+        /// </summary>
+        /// <returns>
+        /// This function returns true if it succeeds or false if it fails.
+        /// </returns>
+        public bool checkout(int studentid)
+        {
+            try
+            {
+                student_id = studentid;
+                available = false;
+            } 
+            catch(Exception e)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// This function makes the resource available again. Sets availability to true.
+        /// </summary>
+        /// <returns>
+        /// This function returns true if it succeeds or false if it fails. 
+        /// </returns>
+        public bool checkin()
+        {
+            try
+            {
+                student_id = null;
+                available = true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
    
         /// <summary>
         /// getter and setter for titles
@@ -47,7 +96,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
             }
         }
 
-        public string Id
+        public int? Id
         {
             get
             {

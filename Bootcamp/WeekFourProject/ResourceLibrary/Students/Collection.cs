@@ -16,12 +16,12 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
         {
             students = new Student[6]
             {
-                new Student("Susy Student"),
-                new Student("Chris Collins"),
-                new Student("Amy Apple"),
-                new Student("Matt Martins"),
-                new Student("Betty Blue"),
-                new Student("Joe Jones"),
+                new Student("Susy Student",1),
+                new Student("Chris Collins",2),
+                new Student("Amy Apple",3),
+                new Student("Matt Martins",4),
+                new Student("Betty Blue",5),
+                new Student("Joe Jones",6),
             };
         }
 

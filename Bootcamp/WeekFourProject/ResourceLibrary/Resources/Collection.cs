@@ -16,20 +16,29 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
         {
             resources = new Resource[11]
             {
-                new Resource("C#"),
-                new Resource("ASP.NET MVC 5"),
-                new Resource("The C# Player's Guide#"),
-                new Resource("Eloquent JavaScript"),
-                new Resource("SQL Queries"),
-                new Resource("Javascript for Kids"),
-                new Resource("Database Design"),
-                new Resource("C# 5.0 for Dummies"),
-                new Resource("Essential C# 6.0"),
-                new Resource("Assembly Language Tutor"),
-                new Resource("Mastering C Pointers"),
+                new Resource("C#",1),
+                new Resource("ASP.NET MVC 5",2),
+                new Resource("The C# Player's Guide#",3),
+                new Resource("Eloquent JavaScript",4),
+                new Resource("SQL Queries",5),
+                new Resource("Javascript for Kids",6),
+                new Resource("Database Design",7),
+                new Resource("C# 5.0 for Dummies",8),
+                new Resource("Essential C# 6.0",9),
+                new Resource("Assembly Language Tutor",10),
+                new Resource("Mastering C Pointers",11),
             };
         }
         
+        public Resource[] forStudentId(int student_id)
+        {
+            return this.resources.Where(c => c.student_id == student_id).ToArray();
+        }
+
+        public Resource[] available()
+        {
+            return this.resources.Where(c => c.isAvailable()).ToArray();
+        }
         /**
         * enumerator interface allows us to iterate over the collection
         * https://support.microsoft.com/en-us/kb/322022
