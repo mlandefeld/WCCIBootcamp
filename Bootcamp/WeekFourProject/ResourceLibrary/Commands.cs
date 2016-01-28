@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Bootcamp.WeekFourProject.ResourceLibrary
 {
@@ -23,22 +24,32 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
         {
             foreach (Students.Student student in this.students)
             {
-                Console.WriteLine(student.Name);
+                Console.WriteLine("\t\t\t" + student.Name);
             }
         }
 
         public void viewAvailableResources()
         {
+            //TODO: if all books are checked out, print "All resources are checked out"
             Resources.Resource[] available = this.resources.available();
             foreach (Resources.Resource resource in available)
             {
-                Console.WriteLine(resource.Title);
+                /*
+                if (Resource == 0)
+                {
+                    Console.WriteLine("\t\t\tAll resources are checked out");
+                }
+                else
+                {
+                    Console.WriteLine("\t\t\t" + resource.Title);
+                }
+                */
             }
         }
 
         public void viewStudentAccounts()
         {
-            Console.WriteLine("Enter Student Name: ");
+            Console.WriteLine("\tEnter Student Name: ");
             string inputName = Console.ReadLine();
 
             int student_id = 0;
@@ -60,18 +71,48 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
 
         }
 
-        public void checkoutItem()
+        public void checkoutItem() //(string validationType, string isValidName)
         {
-            Console.WriteLine("Enter Student Name: ");
+            Console.Write("\tEnter Student Name: ");
             string inputName = Console.ReadLine();
-            Console.WriteLine("Enter Title of Resource: ");
+            //only validate if inputName is a student name. If student name does not exist, print "Error: Request Unavailable"
+            //make sure each student can only check out three resources. 
+            //If student already has three items, print: "[student name] has checked out the max number of resources"
+            //make sure input ignores case
+            //TODO: if all books are checked out, print "All resources are checked out"
+            //loop back or continue if request unavailable so they can input it again. 
+
+
+            /*    if(Resources.Collection == inputName)
+               {
+
+               }
+
+          while (true)
+           {
+               if (validationType == isValidName)
+               {
+                   if (!isValidName(inputName))
+                   {
+                       Console.WriteLine("Your input didn't validate! Try again! ");
+                       inputName = Console.ReadLine();
+                   }
+                   else
+                   {
+                       break;
+                   }
+               }
+           } */
+            Console.Write("\tEnter Title of Resource: ");
             string inputTitle = Console.ReadLine();
 
             int student_id = 0;
 
             foreach (Students.Student student in this.students)
             {
-                if(inputName == student.Name)
+
+
+                if (inputName == student.Name)
                 {
                     student_id = student.Id;
                 }
@@ -84,24 +125,27 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
                     if(resource.isAvailable())
                     {
                         resource.checkout(student_id);
-                        Console.WriteLine(inputName + " checked out " + inputTitle);
+                        Console.WriteLine("\n\t\t" + inputName + " checked out " + inputTitle);
                     }
                     else
                     {
-                        Console.WriteLine("Error: Request Unavailable");
+                        Console.WriteLine("\tError: Request Unavailable");
                     }
                     
                 }
             }
-
             
         }
+                
 
         public void returnItem()
         {
-            Console.WriteLine("Enter Student Name: ");
+            Console.Write("\tEnter Student Name: ");
             string inputName = Console.ReadLine();
-            Console.WriteLine("Enter Title of Resource to Return: ");
+            //only validate if inputName is a student name. If student name does not exist, print "Error: Request Unavailable"
+            //make sure student can only check in resource that they checked out. 
+            //make sure input ignores case
+            Console.Write("\tEnter Title of Resource to Return: ");
             string inputTitle = Console.ReadLine();
 
             int student_id = 0;
@@ -118,14 +162,15 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
             {
                 if (inputTitle == resource.Title)
                 {
+                    //make sure student can only check in resource that they checked out. 
                     if (!resource.isAvailable())
                     {
                         resource.checkin();
-                        Console.WriteLine(inputName + " checked in " + inputTitle);
+                        Console.WriteLine("\n\t\t" +inputName + " checked in " + inputTitle);
                     }
                     else
                     {
-                        Console.WriteLine("Error: Request Unavailable");
+                        Console.WriteLine("\tError: Request Unavailable");
                     }
 
                 }
@@ -135,7 +180,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary
         public static void exit()
         {
             Console.Clear();
-            Console.WriteLine("Thank you for using We Can Code IT's Bootcamp Library Checkout System!");
+            Console.WriteLine("\tThank you for using We Can Code IT's Bootcamp Library Checkout System!");
             Environment.Exit(0);
         }
     }

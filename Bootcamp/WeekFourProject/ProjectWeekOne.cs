@@ -9,12 +9,14 @@ namespace Bootcamp.WeekFourProject
 {
     class ProjectWeekOne
     {
+        //TODO: student can only check out less than three books. ignore case, validate input
+        
         public void Project()
         {
             if (Console.BackgroundColor == ConsoleColor.Black)
             {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                Console.BackgroundColor = ConsoleColor.DarkBlue;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
             }
             Console.Title = "Bootcamp Library Checkout System";
@@ -24,7 +26,6 @@ namespace Bootcamp.WeekFourProject
 
             string menu = (""+
                 "\n\tMenu: Enter a number to select the corresponding option\n\t" +
-                "(Type \"exit\" at any time to end the program)\n\t" +
                 "1.View Students\n\t" + 
                 "2.View Available Resources\n\t" +
                 "3.View Student Accounts\n\t" +
@@ -44,7 +45,7 @@ namespace Bootcamp.WeekFourProject
                 else if (input == "1")
                 {
                     Console.Clear();
-                    string one = "List of Students:\n";
+                    string one = "Bootcamp Library Checkout System \n\n\t\t\tList of Students:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(one);
                     commandInterface.viewStudents();
@@ -56,7 +57,7 @@ namespace Bootcamp.WeekFourProject
                 else if (input == "2")
                 {
                     Console.Clear();
-                    string two = "List of Available Resources:\n";
+                    string two = "Bootcamp Library Checkout System \n\n\t\t\tList of Available Resources:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(two);
                     commandInterface.viewAvailableResources();
@@ -67,7 +68,7 @@ namespace Bootcamp.WeekFourProject
                 else if (input == "3")
                 {
                     Console.Clear();
-                    string three = "View Student Accounts:\n";
+                    string three = "Bootcamp Library Checkout System \n\n\t\t\tView Student Accounts:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(three);
                     commandInterface.viewStudentAccounts();
@@ -78,7 +79,7 @@ namespace Bootcamp.WeekFourProject
                 else if (input == "4")
                 {
                     Console.Clear();
-                    string four = "Checkout Item:\n";
+                    string four = "Bootcamp Library Checkout System \n\n\t\t\tCheckout Item:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(four);
                     commandInterface.checkoutItem();
@@ -89,7 +90,7 @@ namespace Bootcamp.WeekFourProject
                 else if (input == "5")
                 {
                     Console.Clear();
-                    string five = "Return Item:\n";
+                    string five = "Bootcamp Library Checkout System \n\n\t\t\tReturn Item:\n";
                     Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
                     Console.WriteLine(five);
                     commandInterface.returnItem();
@@ -110,50 +111,54 @@ namespace Bootcamp.WeekFourProject
 
         }
 
-        /*
-        //http://www.c-sharpcorner.com/UploadFile/dacca2/many-to-one-relationship-in-C-Sharp-class/
-        public void Main(string[] args)
+        public bool isValidName(string name)
         {
-            Student s = new Student();
-            s.StudentName = "Susy Studen";
+            string[] names = new string[6];
+            names[0] = "Susy Student";
+            names[1] = "Chris Collins";
+            names[2] = "Amy Apple";
+            names[3] = "Matt Martins";
+            names[4] = "Betty Blue";
+            names[5] = "Joe Jones";
 
-            Resource a = new Resource();
-            a.ResourceName = "C#";
-            a.GetSetShop = s;
 
-            Customer b = new Customer();
-            b.ResourceName = "BookBook";
-            b.GetSetShop = s;
-
-            a.Print();
-            b.Print();
-            Console.ReadLine();
+            if (names.Contains(name.ToLower()))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        public bool isValidTitle(string title)
+        {
+            string[] titles = new string[11];
+            titles[0] = "C#";
+            titles[1] = "ASP.NET MVC 5";
+            titles[2] = "The C# Player's Guide#";
+            titles[3] = "Eloquent JavaScript";
+            titles[4] = "SQL Queries";
+            titles[5] = "Javascript for Kids";
+            titles[6] = "Database Design";
+            titles[7] = "C# 5.0 for Dummies";
+            titles[8] = "Essential C# 6.0";
+            titles[9] = "Assembly Language Tutor";
+            titles[10] = "Mastering C Pointers";
 
-        
-    public void Main(string[] args)
-    {
+            if (titles.Contains(title.ToLower()))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        List<Students> T = new List<Student>();
-        Student s1 = new Student();
-        s1.SName = "Susy Student";
-        s1.subject = "Math";
-        S.Add(s1);
-
-        s1 = new Student();
-        s1.SName = "Bob Builder";
-        s1.subject = "computer";
-        S.Add(s1);
-
-        Book b = new Book();
-        b.BName = "c#";
-        b.getsetStudent = S;
-        b.Print();
-        Console.ReadLine();
-    }
-
-    public string getInput(string question, string validationType)
+        /*
+        public string getInput(string question, string validationType)
     {
         
             }
