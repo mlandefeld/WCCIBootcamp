@@ -9,7 +9,7 @@ namespace Bootcamp.WeekFourProject
 {
     class ProjectWeekOne
     {
-        //TODO: student can only check out less than three books. ignore case, validate input
+        //TODO:ignore case, validate input
         
         public void Project()
         {
@@ -111,129 +111,5 @@ namespace Bootcamp.WeekFourProject
 
         }
 
-        public bool isValidName(string name)
-        {
-            string[] names = new string[6];
-            names[0] = "Susy Student";
-            names[1] = "Chris Collins";
-            names[2] = "Amy Apple";
-            names[3] = "Matt Martins";
-            names[4] = "Betty Blue";
-            names[5] = "Joe Jones";
-
-
-            if (names.Contains(name.ToLower()))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool isValidTitle(string title)
-        {
-            string[] titles = new string[11];
-            titles[0] = "C#";
-            titles[1] = "ASP.NET MVC 5";
-            titles[2] = "The C# Player's Guide#";
-            titles[3] = "Eloquent JavaScript";
-            titles[4] = "SQL Queries";
-            titles[5] = "Javascript for Kids";
-            titles[6] = "Database Design";
-            titles[7] = "C# 5.0 for Dummies";
-            titles[8] = "Essential C# 6.0";
-            titles[9] = "Assembly Language Tutor";
-            titles[10] = "Mastering C Pointers";
-
-            if (titles.Contains(title.ToLower()))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        /*
-        public string getInput(string question, string validationType)
-    {
-        
-            }
-            if (validationType == "numbers")
-            {
-                if (!Regex.IsMatch(input, @"^[a-zA-Z0-9]+$"))
-                {
-                    Console.WriteLine("Your input didn't validate, try again!");
-                    input = Console.ReadLine();
-                }
-                else
-                {
-                    break;
-                }
-            }
-            else
-            {
-                return "error!";
-            }
-        }
-
-        return input;
-    }
-    public string Name(string student)
-    {
-        return student;
-    }
-
-    public string getStudentAccounts(string student)
-    {
-        return student; 
-    }
-
-    public string getCheckoutItem(string info)
-    {
-        Console.WriteLine("Student's Name: ");
-        Console.WriteLine("Title of Checkout Item: ");
-
-        return info;
-    }
-
-    public string getReturnItem()
-    {
-        Console.WriteLine("Student's Name: ");
-        Console.WriteLine("Title of Checkout Item: ");
-
-        if ()
-        {
-
-        }
-
-        return "";
-    }
-
-
-
-    public string getStudents(string student)
-    {
-
-
-        string[] students = new string[6];
-        students[0] = "A A";
-        students[1] = "B B";
-        students[2] = "C C";
-        students[3] = "D D";
-        students[4] = "E E";
-        students[5] = "F F";
-
-        //students = students.OrderBy(p => p.Name).ToArray();
-
-        return student;
-
-    }
-
-
-    */
     }
 }

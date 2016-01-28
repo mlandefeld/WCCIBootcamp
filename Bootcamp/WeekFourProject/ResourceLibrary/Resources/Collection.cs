@@ -34,6 +34,15 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
         {
             return this.resources.Where(c => c.student_id == student_id).ToArray();
         }
+        
+        public bool hasLessThanThree(int student_id)
+        {
+            if(this.forStudentId(student_id).Length < 3)
+            {
+                return true;
+            }
+            return false;
+        }
 
         public Resource[] available()
         {

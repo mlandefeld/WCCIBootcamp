@@ -25,6 +25,20 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Students
             };
         }
 
+        public bool hasName(string name)
+        {
+            foreach (Students.Student student in this.students)
+            {
+                if(student.Name.Equals(name, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    return true;
+                }
+               
+            }
+
+            return false;
+        }
+
         /*
          enumerator interface allows us to iterate over the collection
          https://support.microsoft.com/en-us/kb/322022

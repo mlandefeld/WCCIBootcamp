@@ -15,10 +15,14 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
 
         public Resource(string name, int newID)
         {
-            id = newID;
-            title = name;
+            this.id = newID;
+            this.title = name;
         }
-            
+         
+        public bool isCheckedOutBy(int studentid)
+        {
+            return this.student_id == studentid;
+        }   
         public bool isAvailable()
         {
             return available;
