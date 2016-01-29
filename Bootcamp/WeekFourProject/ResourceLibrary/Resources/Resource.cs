@@ -78,7 +78,7 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
         {
             get
             {
-                return title;
+                return this.title;
             }
             set
             {

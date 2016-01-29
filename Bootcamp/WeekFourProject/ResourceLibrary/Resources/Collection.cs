@@ -28,17 +28,23 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
                 new Resource("SQL Queries",10),
                 new Resource("The C# Player's Guide",11),
             };
+
+
+        }
+
+        public Resource findByTitle(string title)
+        {
+            return this.resources.Where(c => c.Title.Equals(title, StringComparison.CurrentCultureIgnoreCase)).First();
         }
 
         public bool hasTitle(string title)
         {
-            foreach (Resources.Resource resource in this.resources)
+            foreach (Resource resource in this.resources)
             {
                 if (resource.Title.Equals(title, StringComparison.CurrentCultureIgnoreCase))
                 {
                     return true;
                 }
-
             }
 
             return false;
