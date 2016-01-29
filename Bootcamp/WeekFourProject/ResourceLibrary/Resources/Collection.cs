@@ -16,20 +16,34 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
         {
             resources = new Resource[11]
             {
-                new Resource("C#",1),
-                new Resource("ASP.NET MVC 5",2),
-                new Resource("The C# Player's Guide#",3),
-                new Resource("Eloquent JavaScript",4),
-                new Resource("SQL Queries",5),
-                new Resource("Javascript for Kids",6),
-                new Resource("Database Design",7),
-                new Resource("C# 5.0 for Dummies",8),
-                new Resource("Essential C# 6.0",9),
-                new Resource("Assembly Language Tutor",10),
-                new Resource("Mastering C Pointers",11),
+                new Resource("ASP.NET MVC 5",1),
+                new Resource("Assembly Language Tutor",2),
+                new Resource("C#",3),
+                new Resource("C# 5.0 for Dummies",4),
+                new Resource("Database Design",5),
+                new Resource("Eloquent JavaScript",6),
+                new Resource("Essential C# 6.0",7),
+                new Resource("JavaScript for Kids",8),
+                new Resource("Mastering C Pointers",9),
+                new Resource("SQL Queries",10),
+                new Resource("The C# Player's Guide",11),
             };
         }
-        
+
+        public bool hasTitle(string title)
+        {
+            foreach (Resources.Resource resource in this.resources)
+            {
+                if (resource.Title.Equals(title, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+
         public Resource[] forStudentId(int student_id)
         {
             return this.resources.Where(c => c.student_id == student_id).ToArray();
@@ -38,6 +52,15 @@ namespace Bootcamp.WeekFourProject.ResourceLibrary.Resources
         public bool hasLessThanThree(int student_id)
         {
             if(this.forStudentId(student_id).Length < 3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool zeroCheckedOut(int student_id)
+        {
+            if (this.forStudentId(student_id).Length == 0)
             {
                 return true;
             }
