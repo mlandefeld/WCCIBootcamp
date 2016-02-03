@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Bootcamp.WeekFive
 {
@@ -47,13 +48,33 @@ namespace Bootcamp.WeekFive
 
         public void capWords()
         {
-            string line = "1sdlfkj RE lsRELK";
+            string line = "1st thing";
 
-            if (string.IsNullOrEmpty(line))
+            char[] a = line.ToCharArray();
+
+            for (int i = 0; i < a.Count(); i++)
             {
-                return string.Empty;
+                a[i] = i == 0 || a[i - 1] == ' ' ? char.ToUpper(a[i]) : a[i];
+
             }
-            Console.WriteLine(char.ToUpper(line[0])+ line.Substring(1));
+
+            new string(a);
+
+            Console.WriteLine(a);
+        }
+
+        public void validateEmail()
+        {
+            string line = "foo@bar.com";
+
+            if (Regex.IsMatch(line, @"(\w+)@(\w+)\.(\w+)"))
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
         }
     }
 }

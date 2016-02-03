@@ -60,7 +60,7 @@ namespace Bootcamp
 
             //Week Five Day 1 and 2 -
             WeekFive.Day1and2 WeekFiveDay1and2 = new WeekFive.Day1and2();
-            WeekFiveDay1and2.capWords();
+            WeekFiveDay1and2.validateEmail();
 
 
             
