@@ -8,8 +8,8 @@ namespace Bootcamp
 {
     class Program
     {
-        static void Main(string[] args)
-        {
+       static void Main(string[] args)
+       {
 
             //Week Two Day One 
             //WeekTwo.DayOne WeekTwoDayOne = new WeekTwo.DayOne();
@@ -60,8 +60,35 @@ namespace Bootcamp
 
             //Week Five Day 1 and 2 -
             WeekFive.Day1and2 WeekFiveDay1and2 = new WeekFive.Day1and2();
-            WeekFiveDay1and2.fibonacciCodeEval();
+            WeekFiveDay1and2.capWords();
 
+
+            
         }
+
+            /*
+        static void Main()
+        {
+           string text = "EM edit";
+            //string reversed = ReverseText(text);
+            //Console.WriteLine(reversed);
+            string caps = ExtractCapitals(text);
+            Console.WriteLine(caps);
+        }
+
+        static string ExtractCapitals(string str)
+        {
+            StringBuilder result = new StringBuilder();
+            for(int i = 0; i<str.Length;i++)
+            {
+                char ch = str[i];
+                if(char.IsUpper(ch))
+                {
+                    result.Append(ch);
+                }
+            }
+            return result.ToString();
+        }
+        */
     }
 }

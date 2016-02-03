@@ -29,7 +29,31 @@ namespace Bootcamp.WeekFive
                 Console.WriteLine(F[n]);
             }
             
+        }
 
+        public void stringBuilder()
+        {
+            Console.WriteLine(DateTime.Now);
+            StringBuilder test = new StringBuilder();
+            test.Append("Build with StringBuilder!");
+            for (int i=0;i<200000;i++)
+            {
+                test.Append(i);
+
+            }
+            Console.WriteLine(test);
+            Console.WriteLine(DateTime.Now);
+        }
+
+        public void capWords()
+        {
+            string line = "1sdlfkj RE lsRELK";
+
+            if (string.IsNullOrEmpty(line))
+            {
+                return string.Empty;
+            }
+            Console.WriteLine(char.ToUpper(line[0])+ line.Substring(1));
         }
     }
 }
