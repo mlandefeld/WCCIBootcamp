@@ -8,8 +8,8 @@ namespace Bootcamp
 {
     class Program
     {
-       static void Main(string[] args)
-       {
+        static void Main(string[] args)
+        {
 
             //Week Two Day One 
             //WeekTwo.DayOne WeekTwoDayOne = new WeekTwo.DayOne();
@@ -59,36 +59,93 @@ namespace Bootcamp
             //WeekFourProjectProjectWeekOne.Project();
 
             //Week Five Day 1 and 2 -
-            WeekFive.Day1and2 WeekFiveDay1and2 = new WeekFive.Day1and2();
-            WeekFiveDay1and2.validateEmail();
+            //WeekFive.Day1and2 WeekFiveDay1and2 = new WeekFive.Day1and2();
+            //WeekFiveDay1and2.validateEmail();
+
+            //Week Five Day Three - 
+            // WeekFive.DayThree WeekFiveDayThree = new WeekFive.DayThree();
+            // WeekFiveDayThree.Add();
 
 
-            
+
+            string[] nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+
+            int[] x = ReturnInt(intArray);
+            Console.WriteLine(x);
+
         }
 
-            /*
-        static void Main()
+        static string[] ReturnInt(string[] newInt)
         {
-           string text = "EM edit";
-            //string reversed = ReverseText(text);
-            //Console.WriteLine(reversed);
-            string caps = ExtractCapitals(text);
-            Console.WriteLine(caps);
-        }
-
-        static string ExtractCapitals(string str)
-        {
-            StringBuilder result = new StringBuilder();
-            for(int i = 0; i<str.Length;i++)
+            int[] test = int.Parse(newInt);
+            for (int i = 0; i > 1; i++)
             {
-                char ch = str[i];
-                if(char.IsUpper(ch))
-                {
-                    result.Append(ch);
-                }
+
             }
-            return result.ToString();
+
+
+            int[] x = int.Parse(newInt);
+            return intArray;
+        }
+
+
+
+
+        static string ReverseNum(string test)
+        {
+            StringBuilder newnum = new StringBuilder();
+            for (int i = test.Length - 1; i >= 0; i--)
+            {
+                newnum.Append(test[i]);
+            }
+            string newString = newnum.ToString();
+            return newString;
+
+        }
+
+
+
+
+
+        //See slide 14, go over
+        //Write a static method called Add. It takes 2 parameters of type int. In the body, it sums the ints, and returns a type of int.
+        //string str = Console.ReadLine();
+        //int sum = Add(2, 5);
+        /*
+        static int Add(int one, int two)
+        {
+            int sum = one + two;
+            return sum;
         }
         */
+
+
+
+
+
+        /*
+    static void Main()
+    {
+       string text = "EM edit";
+        //string reversed = ReverseText(text);
+        //Console.WriteLine(reversed);
+        string caps = ExtractCapitals(text);
+        Console.WriteLine(caps);
+    }
+
+    static string ExtractCapitals(string str)
+    {
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i<str.Length;i++)
+        {
+            char ch = str[i];
+            if(char.IsUpper(ch))
+            {
+                result.Append(ch);
+            }
+        }
+        return result.ToString();
+    }
+    */
     }
 }
