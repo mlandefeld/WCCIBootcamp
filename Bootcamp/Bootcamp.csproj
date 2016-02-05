@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WeekFive\Day1and2.cs" />
+    <Compile Include="WeekFive\DayFour.cs" />
     <Compile Include="WeekFive\DayThree.cs" />
     <Compile Include="WeekFourProject\ProjectWeekOne.cs" />
     <Compile Include="WeekFourProject\ResourceLibrary\Commands.cs" />

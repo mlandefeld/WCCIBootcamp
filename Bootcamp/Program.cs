@@ -66,14 +66,17 @@ namespace Bootcamp
             // WeekFive.DayThree WeekFiveDayThree = new WeekFive.DayThree();
             // WeekFiveDayThree.Add();
 
+            //WeekFive Day Four - 
+            WeekFive.DayFour WeekFiveDayFour = new WeekFive.DayFour();
+            WeekFiveDayFour.ReadMore();
 
+            //string[] nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
-            string[] nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-
-            int[] x = ReturnInt(intArray);
-            Console.WriteLine(x);
+           // int[] x = ReturnInt(intArray);
+            //Console.WriteLine(x);
 
         }
+        /*
 
         static string[] ReturnInt(string[] newInt)
         {
@@ -102,7 +105,7 @@ namespace Bootcamp
             return newString;
 
         }
-
+        */
 
 
 
