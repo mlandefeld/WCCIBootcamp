@@ -67,8 +67,8 @@ namespace Bootcamp
             // WeekFiveDayThree.Add();
 
             //WeekFive Day Four - 
-            WeekFive.DayFour WeekFiveDayFour = new WeekFive.DayFour();
-            WeekFiveDayFour.ReadMore();
+            //WeekFive.DayFour WeekFiveDayFour = new WeekFive.DayFour();
+            //WeekFiveDayFour.ReadMore();
 
             //string[] nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
@@ -104,21 +104,6 @@ namespace Bootcamp
             string newString = newnum.ToString();
             return newString;
 
-        }
-        */
-
-
-
-
-        //See slide 14, go over
-        //Write a static method called Add. It takes 2 parameters of type int. In the body, it sums the ints, and returns a type of int.
-        //string str = Console.ReadLine();
-        //int sum = Add(2, 5);
-        /*
-        static int Add(int one, int two)
-        {
-            int sum = one + two;
-            return sum;
         }
         */
 

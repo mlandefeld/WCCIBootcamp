@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Bootcamp.WeekFive
 {
@@ -35,5 +36,71 @@ namespace Bootcamp.WeekFive
             
         }
 
+        static void BuildHouse()
+        {
+            int width = int.Parse(Console.ReadLine());
+            int height = int.Parse(Console.ReadLine());
+            int y = (width * 5) + (height * 5);
+            Console.WriteLine(y);
+
+        }
+
+        static void CountdownTimer()
+        {
+            Console.WriteLine(DateTime.Now.ToString());
+            
+        }
+
+        static void ValidName()
+        {
+            string firstName = Console.ReadLine();
+            string lastName = Console.ReadLine();
+            while (true)
+            {
+                if (Regex.IsMatch(firstName, @"^[A-Za-z]+$"))
+                {
+
+                }
+                else if (Regex.IsMatch(lastName, @"^[A-Za-z]+$"))
+                {
+
+                }
+                break;
+            }
+
+            Console.WriteLine(firstName + " " + lastName);
+        }
+
+        static void CircleArea()
+        {
+            double radius = 4.3234;
+            double area = Math.PI * (radius * radius);
+
+            Console.WriteLine(area);
+            
+        }
+
+        static void NumberCheck()
+        {
+            int test = int.Parse(Console.ReadLine());
+            while (true)
+            {
+                if (Regex.IsMatch(test, @"^[0-9]+$"))
+                {
+
+                }
+                else
+                {
+
+                }
+                break;
+            }
+
+        }
+
+        static void LostMyTeeth()
+        {
+
+        }
     }
 }
