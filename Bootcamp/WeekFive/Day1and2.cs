@@ -67,7 +67,7 @@ namespace Bootcamp.WeekFive
         {
             string line = "foo@bar.com";
 
-            if (Regex.IsMatch(line, @"^[a-z0-9]+@[a-z]+\.[a-z]+$"))
+            if (Regex.IsMatch(line, @"^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$"))
             {
                 Console.WriteLine("true");
             }

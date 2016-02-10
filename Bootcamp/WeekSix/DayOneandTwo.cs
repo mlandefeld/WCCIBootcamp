@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bootcamp.WeekSix
 {
-    class DayOne
+    class DayOneandTwo
     {
         static void Main(string[] args)
         {
