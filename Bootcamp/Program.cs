@@ -39,7 +39,7 @@ namespace Bootcamp
             //WeekThreeDayThree.upperLower();
 
             //Week Three Day Four - 
-            /* WeekThree.ProjectDay WeekThreeProjectDay = new WeekThree.ProjectDay();
+            /*WeekThree.ProjectDay WeekThreeProjectDay = new WeekThree.ProjectDay();
               while (true)
               {
                   try
@@ -70,12 +70,16 @@ namespace Bootcamp
             //WeekFive.DayFour WeekFiveDayFour = new WeekFive.DayFour();
             //WeekFiveDayFour.ReadMore();
 
-            //string[] nums = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+            //WeekSix Day Three - 
+            WeekSix.DayThree WeekSixDayThree = new WeekSix.DayThree();
+            WeekSixDayThree.IdDictionary();
 
-           // int[] x = ReturnInt(intArray);
-            //Console.WriteLine(x);
-
+         //Main   
         }
+
+
+
+
         /*
 
         static string[] ReturnInt(string[] newInt)
@@ -105,13 +109,10 @@ namespace Bootcamp
             return newString;
 
         }
-        */
 
 
 
-
-
-        /*
+      
     static void Main()
     {
        string text = "EM edit";

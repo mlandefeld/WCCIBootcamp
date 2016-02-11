@@ -82,7 +82,7 @@ namespace Bootcamp.WeekFive
 
         static void NumberCheck()
         {
-            int test = int.Parse(Console.ReadLine());
+            string test = Console.ReadLine();
             while (true)
             {
                 if (Regex.IsMatch(test, @"^[0-9]+$"))

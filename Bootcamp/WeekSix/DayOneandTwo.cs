@@ -8,8 +8,8 @@ namespace Bootcamp.WeekSix
 {
     class DayOneandTwo
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        
             /*
             StreamWriter writer = new StreamWriter("Answers.txt");
 
@@ -49,7 +49,7 @@ namespace Bootcamp.WeekSix
                 Console.Error.WriteLine("Cannot open the file {0}", fileName);
             }
             
-    */
+    
 
             StreamWriter writer = new StreamWriter("Names.txt");
             List<string> list = new List<string>() { "Adam", "Ben", "Carly", "Dana", "Eric", "Fred" };
@@ -118,4 +118,3 @@ namespace Bootcamp.WeekSix
 
         }
     }
-}
