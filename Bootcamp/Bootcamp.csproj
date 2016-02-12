@@ -55,6 +55,7 @@
     <Compile Include="WeekFourProject\ResourceLibrary\Students\Collection.cs" />
     <Compile Include="WeekFourProject\ResourceLibrary\Students\Student.cs" />
     <Compile Include="WeekOne\DayFour.cs" />
+    <Compile Include="WeekSix\DayFourProject.cs" />
     <Compile Include="WeekSix\DayOneandTwo.cs" />
     <Compile Include="WeekSix\DayThree.cs" />
     <Compile Include="WeekThree\DayThree.cs" />
