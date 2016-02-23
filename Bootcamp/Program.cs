@@ -71,70 +71,17 @@ namespace Bootcamp
             //WeekFiveDayFour.ReadMore();
 
             //WeekSix Day Three - 
-            WeekSix.DayThree WeekSixDayThree = new WeekSix.DayThree();
-            WeekSixDayThree.IdDictionary();
+            //WeekSix.DayThree WeekSixDayThree = new WeekSix.DayThree();
+            //WeekSixDayThree.IdDictionary();
 
-         //Main   
-        }
+            //Week Seven Project Week - See Week7ProjectWeek Repo
 
+            //Week Eight Project Week - 
+            WeekEight.DayOne WeekEightDayOne = new WeekEight.DayOne();
+            WeekEightDayOne.Triangle();
+            
 
-
-
-        /*
-
-        static string[] ReturnInt(string[] newInt)
-        {
-            int[] test = int.Parse(newInt);
-            for (int i = 0; i > 1; i++)
-            {
-
-            }
-
-
-            int[] x = int.Parse(newInt);
-            return intArray;
-        }
-
-
-
-
-        static string ReverseNum(string test)
-        {
-            StringBuilder newnum = new StringBuilder();
-            for (int i = test.Length - 1; i >= 0; i--)
-            {
-                newnum.Append(test[i]);
-            }
-            string newString = newnum.ToString();
-            return newString;
 
         }
-
-
-
-      
-    static void Main()
-    {
-       string text = "EM edit";
-        //string reversed = ReverseText(text);
-        //Console.WriteLine(reversed);
-        string caps = ExtractCapitals(text);
-        Console.WriteLine(caps);
-    }
-
-    static string ExtractCapitals(string str)
-    {
-        StringBuilder result = new StringBuilder();
-        for(int i = 0; i<str.Length;i++)
-        {
-            char ch = str[i];
-            if(char.IsUpper(ch))
-            {
-                result.Append(ch);
-            }
-        }
-        return result.ToString();
-    }
-    */
     }
 }

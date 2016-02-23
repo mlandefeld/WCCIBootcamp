@@ -65,11 +65,15 @@ namespace Bootcamp.WeekFive
 
         public void validateEmail()
         {
-            string line = "foo@bar.com";
+            string line = "lskjsdf@lkds.com";
 
             if (Regex.IsMatch(line, @"^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$"))
             {
                 Console.WriteLine("true");
+            }
+            else if(line == null)
+            {
+                
             }
             else
             {
