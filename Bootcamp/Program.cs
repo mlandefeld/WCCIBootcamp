@@ -76,11 +76,13 @@ namespace Bootcamp
 
             //Week Seven Project Week - See Week7ProjectWeek Repo
 
-            //Week Eight Project Week - 
-            WeekEight.DayOne WeekEightDayOne = new WeekEight.DayOne();
-            WeekEightDayOne.Triangle();
-            
+            //Week Eight Day One - 
+            //WeekEight.DayOne WeekEightDayOne = new WeekEight.DayOne();
+            //WeekEightDayOne.Triangle();
 
+            //Week Eight Day Two
+            WeekEight.Chair WeekEightOffice = new WeekEight.Chair();
+            WeekEightOffice.ChairType();
 
         }
     }
