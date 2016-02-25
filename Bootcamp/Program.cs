@@ -81,9 +81,11 @@ namespace Bootcamp
             //WeekEightDayOne.Triangle();
 
             //Week Eight Day Two
-            WeekEight.Chair WeekEightOffice = new WeekEight.Chair();
-            WeekEightOffice.ChairType();
+            //WeekEight.DayTwoandThree WeekEightOffice = new WeekEight.DayTwoandThree();
+            //WeekEightDayTwoandThree.Age();
 
+            WeekEight.Student WeekEightStudent = new WeekEight.Student();
+            WeekEightStudent.();
         }
     }
 }
