@@ -84,8 +84,13 @@ namespace Bootcamp
             //WeekEight.DayTwoandThree WeekEightOffice = new WeekEight.DayTwoandThree();
             //WeekEightDayTwoandThree.Age();
 
-            WeekEight.Student WeekEightStudent = new WeekEight.Student();
-            WeekEightStudent.();
+            //WeekEight.Student WeekEightStudent = new WeekEight.Student();
+            //WeekEightStudent.();
+
+            //Week Nine Day One
+            WeekNine.DayOneandThree WeekNineDayOne = new WeekNine.DayOneandThree();
+            WeekNineDayOne.();
+
         }
     }
 }
