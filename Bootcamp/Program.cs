@@ -88,9 +88,16 @@ namespace Bootcamp
             //WeekEightStudent.();
 
             //Week Nine Day One
-            WeekNine.DayOneandThree WeekNineDayOne = new WeekNine.DayOneandThree();
-            WeekNineDayOne.();
+            //WeekNine.DayOneandThree WeekNineDayOne = new WeekNine.DayOneandThree();
+            //WeekNineDayOne.();
 
+            //Week Ten Day One
+            //WeekTen.Day1 WeekTenDay1 = new WeekTen.Day1();
+            //WeekTenDay1.CodeEvalCabOrChard();
+
+            //WeekTen.Savings WeekTenDay1 = new WeekTen.Savings();
+            //WeekTenDay1.Withdraw();
         }
     }
 }
+

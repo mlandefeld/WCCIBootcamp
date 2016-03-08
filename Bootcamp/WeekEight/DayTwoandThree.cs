@@ -17,12 +17,6 @@ namespace Bootcamp.WeekEight
             this.age = 16;
         }
 
-        public int Age()
-        {
-            get { return this.age; }
-            set { this.age = 16; }
-        }
-
 
     }
 }

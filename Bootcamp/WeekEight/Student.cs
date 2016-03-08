@@ -63,14 +63,5 @@ namespace Bootcamp.WeekEight
         }
 
 
-        //static void Main()
-        {
-            Student stuff = new Student("Mar", "m@m.com", "5555555");
-            Console.WriteLine(stuff.fullName + " " + stuff.email + " " + stuff.phoneNumber);
-
-        }
-
-
-
     }
 }
