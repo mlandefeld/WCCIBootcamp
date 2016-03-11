@@ -92,9 +92,11 @@ namespace Bootcamp
             //WeekNineDayOne.();
 
             //Week Ten Day One
-            WeekTen.Day1 WeekTenDay1 = new WeekTen.Day1();
-            WeekTenDay1.CodeEvalCabOrChard();
+            //WeekTen.Day1 WeekTenDay1 = new WeekTen.Day1();
+            //WeekTenDay1.CodeEvalCabOrChard();
 
+            WeekTen.Day4 WeekTenDay4 = new WeekTen.Day4();
+            WeekTenDay4.OtherException();
 
         }
     }

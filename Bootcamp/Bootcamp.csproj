@@ -63,6 +63,7 @@
     <Compile Include="WeekSix\DayOneandTwo.cs" />
     <Compile Include="WeekSix\DayThree.cs" />
     <Compile Include="WeekTen\Day1.cs" />
+    <Compile Include="WeekTen\Day4.cs" />
     <Compile Include="WeekThree\DayThree.cs" />
     <Compile Include="WeekThree\DayTwo.cs" />
     <Compile Include="WeekOne\DayOne.cs" />
